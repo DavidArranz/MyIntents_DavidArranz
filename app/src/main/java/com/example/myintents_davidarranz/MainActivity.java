@@ -57,7 +57,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 etInPut.setVisibility(View.VISIBLE);
-                tvAviso.setText("Se va a realizar una busqueda web");
+                tvAviso.setText("Se va a buscar el url");
                 unclickable();
             }
         });
