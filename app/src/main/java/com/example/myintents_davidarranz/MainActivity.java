@@ -28,12 +28,12 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onFocusChange(View view, boolean b) {
                 if(!b){
-                    if(dial.isSelected()){
+                    if(dial.isChecked()){
                         Intent i = new Intent(Intent.ACTION_CALL, Uri.parse("tel:"+etInPut.getText().toString()));
                         startActivity(i);
-                    }else {
+                    }else if(url.isChecked()) {
                         Intent i = new Intent(Intent.ACTION_VIEW,
-                                Uri.parse(etInPut.getText().toString()));
+                                Uri.parse("http://www."+etInPut.getText().toString()));
                         startActivity(i);
                     }
 
